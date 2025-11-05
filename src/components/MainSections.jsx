@@ -68,8 +68,7 @@ export function HomeSection() {
 
 export function ProfileSection({ user }) {
   const me =
-    user ||
-    ({
+    user || {
       name: 'Guest',
       handle: '@you',
       avatar:
@@ -77,7 +76,7 @@ export function ProfileSection({ user }) {
       bio: 'Exploring modern design in the Instaverse.',
       stats: { posts: 128, followers: '12.4k', following: 341 },
       verified: true,
-    } as const);
+    };
 
   return (
     <section className="mx-auto max-w-6xl px-6 py-10">
